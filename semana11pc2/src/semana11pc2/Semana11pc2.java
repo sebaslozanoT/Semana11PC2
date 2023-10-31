@@ -81,23 +81,26 @@ public class Semana11pc2 {
         } while (opcion != 10);
     }
 
-    private static void agregarEstudiante() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("****** REGISTRAR A UN NUEVO ESTUDIANTE ********");
-        System.out.print("INGRESE NOMBRES: ");
-        String nombres = scanner.next();
-        System.out.print("INGRESE APELLIDOS: ");
-        String apellidos = scanner.next();
-        System.out.print("INGRESE CICLO: ");
-        int ciclo = scanner.nextInt();
-        System.out.print("INGRESE PENSION: ");
-        double pension = scanner.nextDouble();
+   // Agregar un nuevo estudiante al registro
+private static void agregarEstudiante() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("****** REGISTRAR A UN NUEVO ESTUDIANTE ********");
+    System.out.print("INGRESE NOMBRES: ");
+    String nombres = scanner.next();
+    System.out.print("INGRESE APELLIDOS: ");
+    String apellidos = scanner.next();
+    System.out.print("INGRESE CICLO: ");
+    int ciclo = scanner.nextInt();
+    System.out.print("INGRESE PENSION: ");
+    double pension = scanner.nextDouble();
 
-        int codigo = listaEstudiantes.size() + 101;
-        Estudiante nuevoEstudiante = new Estudiante(codigo, nombres, apellidos, ciclo, pension);
-        listaEstudiantes.add(nuevoEstudiante);
-        System.out.println("¡Se añadió con éxito!");
-    }
+    // Generar un nuevo código para el estudiante y crear una instancia de Estudiante
+    int codigo = listaEstudiantes.size() + 101;
+    Estudiante nuevoEstudiante = new Estudiante(codigo, nombres, apellidos, ciclo, pension);
+    listaEstudiantes.add(nuevoEstudiante);
+    System.out.println("¡Se añadió con éxito!");
+}
+
 
     private static void buscarEstudiante() {
         Scanner scanner = new Scanner(System.in);
